@@ -19,7 +19,7 @@ app.get("/",function(req,res){
     const johnKidneys=user[0].kidneys;
     const numberOfKidneys=johnKidneys.length;
     let numberOfHealthyKidneys=0;
-    for(let i=0;i<numberOfKidneys.length;i++)
+    for(let i=0;i<johnKidneys.length;i++)
     {
         if(johnKidneys[i].healthy)
         {
