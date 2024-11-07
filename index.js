@@ -51,3 +51,27 @@ app.post("/",function(req,res){
         msg:"Done!"
     })
 })
+
+
+/*app.put("/",function(req,res){
+
+    for(let i=0;i<user[0].kidneys.length;i++)
+    {
+        user[0].kidneys[i].healthy=true;
+    }
+    res.json({});
+})*/
+
+
+app.put("/", function (req, res) {
+    
+
+    for (let i = 0; i < user[0].kidneys.length; i++) {
+        if (!user[0].kidneys[i].healthy) {  
+            user[0].kidneys[i].healthy = true;  
+            break;  
+        }
+    }
+
+    res.json({ success: true });
+});
